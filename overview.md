@@ -62,6 +62,34 @@ For each affected user, a detailed Excel report is generated in the output/ dire
 
 ---
 
+
+## 🚀 Anomoly Detection:
+Once all sync errors were extracted, we performed a time-based analysis to identify the periods with the highest error occurrences. These were visualized in a month-to-month error trend chart, highlighting anomalies and unusual spikes.
+
+From the analysis, it was observed that December 2023 (2023-12) recorded the highest number of errors, pointing to a potential system anomaly/bug that was later resolved.
+
+When you run this project, the chart will be automatically generated as get_errors_over_time in the output directory, allowing you to easily spot similar anomalies in future runs.
+
+
+## 📊 Current Outputs
+
+1. **Overdraft Reports (Per User)**  
+   - Generated in `output/`.  
+   - Contains details of failed transactions, overdraft timestamps, and sync mismatches. 
+        -  **balance_sync_report** A final structured report is generated listing each userId with sync failures, including total and failed transactions, transaction currency, first error occurrence, and estimated credit/debit loss.
+        -  **get_total_loss_by_currency** A hollistic view by currency of CALO potential loss due to transaction sync failures
+        -  **get_top_error_reasons** A visilization of top reason captured for trasaction failures
+        -  **get_errors_over_time** A timescale graph is generated showing error counts on a month-to-month basis, helping highlight anomalies and potential system bugs.
+
+2. **Error & Loss Charts**  
+   - Aggregated **loss per currency** visualized in charts.  
+   - Timeline identifying the timeframe where mostly balance sync failed pointing anomloy and putting attention towards that fram to look for potential cause
+   - Top failure reasons incuured to analyse the root cause.
+   - Stored in Excel and **snapshots/** folder for quick reference.  
+
+---
+
+
 ## 🔧 Key Implementation Decisions
 
 ### Language: **Python**
@@ -89,30 +117,6 @@ For each affected user, a detailed Excel report is generated in the output/ dire
 
 ---
 
-## 📊 Current Outputs
-
-1. **Overdraft Reports (Per User)**  
-   - Generated in `output/`.  
-   - Contains details of failed transactions, overdraft timestamps, and sync mismatches. 
-        -  **balance_sync_report** A final structured report is generated listing each userId with sync failures, including total and failed transactions, transaction currency, first error occurrence, and estimated credit/debit loss.
-        -  **get_total_loss_by_currency** A hollistic view by currency of CALO potential loss due to transaction sync failures
-        -  **get_top_error_reasons** A visilization of top reason captured for trasaction failures
-        -  **get_errors_over_time** A timescale graph is generated showing error counts on a month-to-month basis, helping highlight anomalies and potential system bugs.
-
-2. **Error & Loss Charts**  
-   - Aggregated **loss per currency** visualized in charts.  
-   - Timeline identifying the timeframe where mostly balance sync failed pointing anomloy and putting attention towards that fram to look for potential cause
-   - Top failure reasons incuured to analyse the root cause.
-   - Stored in Excel and **snapshots/** folder for quick reference.  
-
----
-
-## 🚀 Anomoly Detection:
-Once all sync errors were extracted, we performed a time-based analysis to identify the periods with the highest error occurrences. These were visualized in a month-to-month error trend chart, highlighting anomalies and unusual spikes.
-
-From the analysis, it was observed that December 2023 (2023-12) recorded the highest number of errors, pointing to a potential system anomaly/bug that was later resolved.
-
-When you run this project, the chart will be automatically generated as get_errors_over_time in the output directory, allowing you to easily spot similar anomalies in future runs.
 
 ## 🚀 Future Improvements
 
