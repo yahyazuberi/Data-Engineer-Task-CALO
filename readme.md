@@ -3,6 +3,8 @@
 This project processes gzipped **transaction logs from CALO** and extracts structured insights for further investigation.  
 It focuses on detecting **balance synchronization issues**, **overdrafting**, and **losses**, while generating **Excel-based analytical reports** with both tabular and graphical views.  
 
+*implemetaion details can be found in **overview.md***
+
 ---
 
 ## ⚙️ Project Structure  
@@ -68,3 +70,7 @@ After running, the following Excel reports will be available inside your chosen 
 | **get\_errors\_over\_time.xlsx**        | Timeline of errors aggregated monthly, with **charts** showing error trends.                                        |
 | **get\_top\_error\_reasons.xlsx**       | Most frequent error reasons, useful for **root-cause analysis**.                                                    |
 | **get\_total\_loss\_by\_currency.xlsx** | Summary of debit/credit losses per currency, with **graphical visualization of financial impact**.                  |
+
+## 📁 Overview.md
+
+  For implementaion details please refer to overview.md file. 
