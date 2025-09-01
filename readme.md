@@ -7,6 +7,7 @@ It focuses on detecting **balance synchronization issues**, **overdrafting**, an
 
 ## ⚙️ Project Structure  
 
+
 ```bash
 .
 ├── main.py                # Entry point: parses logs, runs analysis, generates reports
